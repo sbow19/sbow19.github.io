@@ -1,0 +1,46 @@
+/*Defaults for web page*/
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /*Text optimisations*/
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /*Colors*/
+  --white: white
+}
+
+/*Global defaults*/
+* {
+  margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	color: black;
+
+  /*Border for dev purposes*/
+	border: 1px solid red;
+}
+
+body {
+
+  /* Default fonts*/
+  font-family: 'Lato', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+	font-size: 0.75rem;
+
+  /* Background image */
+	background-image: url("../assets/brandon-stoll-57Xkec_2iCM-unsplash.jpg");
+	background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+
+
