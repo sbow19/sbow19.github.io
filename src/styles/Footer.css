@@ -1,0 +1,14 @@
+/*Footer*/
+
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: clamp(50px, 5vh, 100px);
+	background-color: #333;
+	opacity: 0.9;
+	font-size: 0.75rem;
+	color: white;
+	text-align: center;
+}
