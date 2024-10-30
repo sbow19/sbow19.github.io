@@ -3,6 +3,7 @@ import '@styles/App.css';
 import React, {useEffect} from 'react';
 import CarouselContainer from './carousel-container';
 import { operateCarousel } from '@/src/utils/carousel';
+import { Link } from 'react-router-dom';
 
 // Carousel Component - displays carousel containers
 const ProjectSlide: React.FC<ProjectSlideProps> = ({ projects }) => {
@@ -15,7 +16,9 @@ const ProjectSlide: React.FC<ProjectSlideProps> = ({ projects }) => {
 	return (
 		<section className='my-projects-container content-container'>
 			<div className='my-projects-title'>
-				<h2>Projects</h2>
+				
+					<Link to='/projects'><h2>Projects</h2></Link>
+				
 			</div>
 
 			<div

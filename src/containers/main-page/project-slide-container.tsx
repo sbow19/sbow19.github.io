@@ -1,23 +1,21 @@
 import '@styles/index.css';
 import '@styles/App.css';
-import React from 'react';
+import React, {useContext} from 'react';
 import ProjectSlide from '@/src/components/main-page/project-slide';
 
-//Import Yaml file containing experience information
-import Yaml from "experience.yaml"
-
-const YamlContent = Yaml as YAMLContent
+//Import contexts
+import ContentContext from '@/src/context/content_context';
 
 // Stateful container for experience carousel on main page
 const ProjectSlideContainer: React.FC = () => {
 
     // Parse YAML content served to client 
-    console.log(YamlContent.root.projects)
+    const projectsList: YAMLContent = useContext(ContentContext)
 
 	return (
         
         <ProjectSlide 
-            projects={YamlContent.root.projects}
+            projects={projectsList.root.projects}
         />
         
     );

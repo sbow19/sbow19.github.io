@@ -1,24 +1,27 @@
 import '@styles/index.css';
 import '@styles/App.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const CarouselContainer: React.FC<CarouselContainerProps> = ({ project, index }) => {
+const CarouselContainer: React.FC<CarouselContainerProps> = ({
+	project,
+	index,
+}) => {
+	const slideClassName = `slide-container slide-${index}`;
 
-    const slideClassName = `slide-container slide-${index}`
-
-	
 	return (
 		<article className={slideClassName}>
 			<div className='slide'>
 				<h3>{project.name}</h3>
 				<div className='project-icon-container'>
 					{project.icons.map((icon, index) => {
-						return (icon ? (<img
+						return icon ? (
+							<img
 								key={index}
 								className='project-icon'
 								src={icon}
-							/>) : null
-						);
+							/>
+						) : null;
 					})}
 				</div>
 				<div className='project-description'>
@@ -32,19 +35,22 @@ const CarouselContainer: React.FC<CarouselContainerProps> = ({ project, index })
 					</ul>
 				</div>
 
-				{project.links.github ? (
-					<a
-						href='https://github.com/sbow19/VocabPanda'
-						target='_blank'
-						className='view-project-on-github'
-					>
-						<p>View on Github</p>
-						<img
-							src='src\assets\github.svg'
-							className='social-icons'
-						/>
-					</a>
-				) : null}
+				<div className='carousel-links-wrapper'>
+					<Link to={`/projects/${project.id}`} className='website-link'>Click for more details</Link>
+					{project.links.github ? (
+						<a
+							href='https://github.com/sbow19/VocabPanda'
+							target='_blank'
+							className='view-project-on-github'
+						>
+							<p>View on Github</p>
+							<img
+								src='src\assets\github.svg'
+								className='social-icons'
+							/>
+						</a>
+					) : null}
+				</div>
 			</div>
 		</article>
 	);

@@ -1,15 +1,12 @@
 /**
  * Operate Carousel
  */
-
 function operateCarousel(noOfSlides: number) {
+
 	function visibleButtonState(displacementValue) {
 		//Check if window is laptop screen size
-		if (window.innerWidth > 1024) {
-			return;
-		}
 	
-		if (displacementValue === noOfSlides) {
+		if (displacementValue === noOfSlides - 1) {
 			rightButton.style.display = 'none';
 		} else if (displacementValue === 0) {
 			leftButton.style.display = 'none';
@@ -18,6 +15,7 @@ function operateCarousel(noOfSlides: number) {
 			leftButton.style.display = 'block';
 		}
 	}
+	
 	
 	let displaceValue = 0;
 	
@@ -82,9 +80,6 @@ function operateCarousel(noOfSlides: number) {
 		visibleButtonState(displaceValue);
 	});
 }
-
-
-
 
 export {
 	operateCarousel,

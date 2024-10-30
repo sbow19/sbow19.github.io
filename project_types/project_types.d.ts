@@ -14,6 +14,13 @@ declare global {
             portfolio_page?: string
         }
         icons: Array<string>
+        id: string
+        overview: string
+        features: Array<string>
+        full_technologies: Array<string>
+        challenges: Array<string>
+        future: Array<string>
+        code: string
     }
 
     //COMPONENT PROPS TYPES
@@ -25,6 +32,18 @@ declare global {
         project: ProjectDetails
         key: number
     }
+
+    interface ContentContainerProps {
+        children: ReactNode
+        classNames: Array<string>
+        element: string
+    }
+
+    interface ProjectDetailsDropdownProps {
+        projects: Array<ProjectDetails>
+        onSelect: (e: ChangeEvent<HTMLSelectElement>)=>void
+    }
+
 }
 
 export {}
