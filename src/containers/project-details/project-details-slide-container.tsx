@@ -3,41 +3,89 @@ import '@styles/App.css';
 import React from 'react';
 import ContentContainer from '@/src/components/shared/content-container';
 
+const mediaHelperFunction = (media)=>{
+
+	let slideMedia = {
+		rightBoxStyle: "right-box",
+		slideMedia: ""
+	}
+	//If no slide media, then hide right bow)
+	if(typeof(media) === "string"){
+		slideMedia.rightBoxStyle = 'right-box-hide';
+		
+	} else {
+
+		slideMedia.slideMedia = media.map((media, index) => (
+			<img key={index} className='project-media' src={media} />
+		))  				
+	}
+
+	return slideMedia
+
+}
+
 const ProjectDetailsSlideContainer: React.FC = ({
 	project,
 	slideType,
 	isSlideTurnedOn,
 	handleSetInfo,
-    selectedInfo
+	selectedInfo,
 }) => {
 	//Slide title
 	let slideTitle;
 	let slideContents;
+	let slideStyle;
+	let slideMedia = {
+		rightBoxStyle: "right-box",
+		slideMedia: ""
+	}; 
 
 	switch (slideType) {
 		case 'overview':
 			slideTitle = 'Overview';
-			slideContents = project.overview;
+			slideContents = project.overview.description.trim().split('\n').map((paragraph, index) => (
+				<p key={index}>{paragraph}</p>
+			));
+			slideStyle = 'project-overview-slide'
+			slideMedia = mediaHelperFunction(project.overview.media)
 			break;
 		case 'features':
 			slideTitle = 'Features';
-			slideContents = project.features;
+			slideStyle = 'project-features-slide';
+			slideContents = project.features.map((feature, index) => (
+				<p key={index}>{feature}</p>
+			));
+			slideMedia.rightBoxStyle = "right-box-hide"
 			break;
 		case 'technologies':
 			slideTitle = 'Technologies';
-			slideContents = project.full_technologies;
+			slideStyle = 'project-technologies-slide';
+			slideMedia.rightBoxStyle = "right-box-hide"
+			slideContents = project.full_technologies.map((technology, index) => (
+				<p key={index}>{technology}</p>
+			));
 			break;
 		case 'challenges':
 			slideTitle = 'Challenges';
-			slideContents = project.challenges;
+			slideStyle = 'project-challenges-slide';
+			slideMedia.rightBoxStyle = "right-box-hide"
+			slideContents = project.challenges.map((challenges, index) => (
+				<p key={index}>{challenges}</p>
+			));
 			break;
 		case 'future':
 			slideTitle = 'Future Plans';
-			slideContents = project.future;
+			slideStyle = 'project-future-slide';
+			slideMedia.rightBoxStyle = "right-box-hide"
+			slideContents = project.future.map((future, index) => (
+				<p key={index}>{future}</p>
+			));
 			break;
 		case 'code':
 			slideTitle = 'Source Code';
 			slideContents = project.code;
+			slideStyle = 'project-code-slide';
+			slideMedia.rightBoxStyle = "right-box-hide"
 
 			break;
 	}
@@ -46,7 +94,7 @@ const ProjectDetailsSlideContainer: React.FC = ({
 			{isSlideTurnedOn ? (
 				<ContentContainer
 					element='section'
-					classNames={[' project-slide']}
+					classNames={[' project-slide', slideStyle]}
 				>
 					{/* Title */}
 					<div className='project-info-title-wrapper'>
@@ -55,19 +103,23 @@ const ProjectDetailsSlideContainer: React.FC = ({
 
 					<div className='project-details-boxes-wrapper'>
 						{/* Left Box */}
-						<div>Left box</div>
+						<div className='left-box'>
+							{slideContents}
+						</div>
 
 						{/* Right box */}
-						<div>Right box</div>
+						<div className={slideMedia.rightBoxStyle}>
+							{slideMedia.slideMedia}
+						</div>
 					</div>
 				</ContentContainer>
 			) : (
 				<ContentContainer
 					element='section'
 					classNames={[
-                        ' p-s-minimised',
-                        selectedInfo === slideType ? 'info-button-highlighted' : ""
-                    ]}
+						' p-s-minimised',
+						selectedInfo === slideType ? 'info-button-highlighted' : '',
+					]}
 				>
 					<button
 						onClick={() => {

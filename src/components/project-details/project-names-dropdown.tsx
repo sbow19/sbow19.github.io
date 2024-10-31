@@ -11,7 +11,8 @@ const ProjectDetailsDropdown: React.FC<ProjectDetailsDropdownProps> = ({projects
                 <option value="">--Select project--</option>
                 {projects.map((project, index)=>{
                     return (
-                        <option
+                        <option 
+                            className='dropdown-options'
                             value={project.name}
                             key={index}
                         >

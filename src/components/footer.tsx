@@ -4,7 +4,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
 	return (
-		<footer>Website designed and developed by Sam Bowditch</footer>
+		<footer>Website designed by me :)</footer>
 	);
 };
 
