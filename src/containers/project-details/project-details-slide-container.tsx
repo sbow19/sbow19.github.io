@@ -5,14 +5,12 @@ import ContentContainer from '@/src/components/shared/content-container';
 import MediaCarouselContainer from './media-carousel-container';
 
 const mediaHelperFunction = (media) => {
-	
 	//If no slide media, then hide right bow)
 	if (typeof media === 'string') {
 		return 'right-box-hide';
 	} else {
-		return 'right-box'
+		return 'right-box';
 	}
-
 };
 
 const ProjectDetailsSlideContainer: React.FC = ({
@@ -88,9 +86,22 @@ const ProjectDetailsSlideContainer: React.FC = ({
 			break;
 		case 'code':
 			slideTitle = 'Source Code';
-			slideContents = project.code;
 			slideStyle = 'project-code-slide';
 			rightBoxStyle = 'right-box-hide';
+
+			// If url then add <a> element
+			if (project.code.includes('https')) {
+				slideContents = (
+					<a
+						href={project.code}
+						className='project-code-link'
+					>
+						{project.code}
+					</a>
+				);
+			} else {
+				slideContents = <p className='project-code-no-content'>{project.code}</p>;
+			}
 
 			break;
 	}
@@ -112,7 +123,7 @@ const ProjectDetailsSlideContainer: React.FC = ({
 
 						{/* Right box && carousel container */}
 						<div className={rightBoxStyle}>
-							<MediaCarouselContainer mediaList={project.overview.media}/>
+							<MediaCarouselContainer mediaList={project.overview.media} />
 						</div>
 					</div>
 				</ContentContainer>

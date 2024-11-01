@@ -6,8 +6,15 @@ import MediaSlideContainer from './media-slide-container';
 
 const MediaCarouselContainer = ({ mediaList }) => {
 	useEffect(() => {
-		operateCarousel(mediaList.length, 'media-left-arrow', 'media-right-arrow');
 
+		// Check if there is media at all
+		if (typeof mediaList === 'string') {
+			//Do nothing;
+		} else {
+			operateCarousel(mediaList.length, 'media-left-arrow', 'media-right-arrow');
+			
+		}
+		
 		return (resetCarousel)
 	}, [mediaList]);
 

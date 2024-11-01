@@ -1327,3 +1327,24 @@ footer {
 	text-align: center;
 }
 
+.project-code-slide {
+	overflow: hidden;
+}
+
+.project-code-link{
+	text-decoration: underline;
+	color: blue;
+	margin: 20px;
+	display: block;
+	text-align: center;
+	transition: transform 0.3s ease;
+}
+
+.project-code-link:hover{
+	transform: scale(1.1);
+}
+
+.project-code-no-content{
+	text-align: center
+}
+
