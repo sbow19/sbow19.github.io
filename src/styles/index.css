@@ -24,14 +24,14 @@
 	color: black;
 
   /*Border for dev purposes*/
-	border: 1px solid red;
+	/* border: 1px solid red; */
 }
 
 body {
 
   /* Default fonts*/
   font-family: 'Lato', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-	font-size: 0.75rem;
+	font-size: 0.65rem;
 
   /* Background image */
 	background-image: url("../assets/brandon-stoll-57Xkec_2iCM-unsplash.jpg");
@@ -44,6 +44,26 @@ body {
 
 strong{
 	color: white
+}
+
+@media (min-width: 400px){
+  body{
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 700px){
+  body{
+    font-size: 1.1rem;
+  }
+
+}
+
+@media (min-width: 1024px){
+  body{
+    font-size: 1.2rem;
+  }
+
 }
 
 

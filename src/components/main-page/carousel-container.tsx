@@ -8,6 +8,7 @@ const CarouselContainer: React.FC<CarouselContainerProps> = ({
 	index,
 }) => {
 	const slideClassName = `slide-container slide-${index}`;
+	const githubLink = `${project.links.github}`
 
 	return (
 		<article className={slideClassName}>
@@ -36,10 +37,10 @@ const CarouselContainer: React.FC<CarouselContainerProps> = ({
 				</div>
 
 				<div className='carousel-links-wrapper'>
-					<Link to={`/projects/${project.id}`} className='website-link'>Click for more details</Link>
+					<Link to={`/projects/${project.id}`} className='website-link'>More details</Link>
 					{project.links.github ? (
 						<a
-							href='https://github.com/sbow19/VocabPanda'
+							href={githubLink}
 							target='_blank'
 							className='view-project-on-github'
 						>

@@ -10,7 +10,7 @@ const ProjectSlide: React.FC<ProjectSlideProps> = ({ projects }) => {
 
     useEffect(()=>{
 
-		operateCarousel(projects.length)
+		operateCarousel(projects.length, 'left-arrow', 'right-arrow')
 
 	}, [])
 	return (

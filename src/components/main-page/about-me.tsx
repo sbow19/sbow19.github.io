@@ -8,7 +8,7 @@ const AboutMe: React.FC = () => {
 			<div className='profile-img-wrapper'>
 				<img
 					alt='Sam Bowditch'
-					src='src\assets\Screenshot 2024-03-05 150356.png'
+					src='src\assets\Screenshot 2024-03-05 150356.jpg'
 				/>
 				{/* Must be of proper resolution for screen size*/}
 			</div>
