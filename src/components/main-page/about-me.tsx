@@ -17,21 +17,20 @@ const AboutMe: React.FC = () => {
 					<h2>About me</h2>
 				</div>
 				<div className='about-me-text'>
-					I am an aspiring self-taught developer with a strong analytical
-					background in corporate intelligence and law. I decided to take a career
-					break after learning how to program in my free time at my previous
-					job.
+					I am a software developer developer with a passion for building fullstack 
+					productivity applications for mobile and the browser. I have a strong
+					understanding of JavaScript and Python, which have formed the cornerstone 
+					of my projects. I am also learning Go. 
 
 					<br/>
 					<br/>
 					
-					I have been making use of online teaching platforms like MDN Web Docs and CodeCademy, while working on
-					personal projects to put these news skills into practice. I have taken
-					a keen interest in developing Android and Chrome Extension
-					applications using React and React Native, so my current strengths
-					center around JavaScript/Typescript and NodeJs. I am now confident
-					enough to gain professional experience in a professional developer
-					environment.
+					Most recently, I built a web-scraper Chrome Extension, which speeds up the 
+					process of collecting data from frequently visited websites.
+
+					My current projects include a CLI-messaging app (Go), a 
+					Mobile language learning app (React Native), and a 3D browser-game
+					(WebGL, TypeScript).
 
 					<br/>
 					<br/>

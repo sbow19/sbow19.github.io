@@ -40,15 +40,12 @@ const Header: React.FC = () => {
 		<header>
 			<div className='my-name'>
 				<h1>Sam Bowditch</h1>
-				<h2>Software Developer Resume</h2>
+				<h2>Software Developer</h2>
 			
 			</div>
-			<div className='site-description'>
-				<p>Determined to start my journey to become a software developer.</p>
-			</div>
-			<nav className='site-nav-bar'>
+			{/* <nav className='site-nav-bar'>
 				<Link to={navDetails.linkPath}><strong>{navDetails.linkName}</strong> </Link>
-			</nav>
+			</nav> */}
 		</header>
 	);
 };

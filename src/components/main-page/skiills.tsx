@@ -14,8 +14,8 @@ const Skills: React.FC = () => {
 						<h3>Programming languages: </h3>
 						<p>
 							Proficient in <strong>JavaScript</strong> and{' '}
-							<strong>TypeScript</strong> (intermediate level), with experience
-							in <strong>Python</strong> (intermediate level).
+							<strong>TypeScript</strong>, and
+							in <strong>Python</strong>. Currently learning <strong>Go</strong>.
 						</p>
 					</li>
 					<li className='skill-container'>
@@ -29,7 +29,7 @@ const Skills: React.FC = () => {
 						<h3>Frameworks:</h3>
 						<p>
 							Experience in building developing a dynamic mobile application
-							using <strong>React Native</strong> (basic to intermediate level).{' '}
+							using <strong>React Native</strong>.{' '}
 						</p>
 					</li>
 					<li className='skill-container'>

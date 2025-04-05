@@ -10,9 +10,9 @@ const appRouter = createBrowserRouter(createRoutesFromElements(
     <Route path='/' element={ <SiteBody/> }>
         <Route index element={<Navigate to="/about" />} />
         <Route path='about' element={ <Content/>} />
-        <Route path='projects' element={ <ProjectsOverviewContainer/> }>
+        {/* <Route path='projects' element={ <ProjectsOverviewContainer/> }>
             <Route path=':name' element={ <ProjectDetailsContainer/> }/>
-        </Route>
+        </Route> */}
         <Route path='*' element={<Content />} />
     </Route>
   ));
