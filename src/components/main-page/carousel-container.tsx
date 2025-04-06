@@ -1,7 +1,10 @@
+/**
+ * Container for a particular project
+ */
 import '@styles/index.css';
 import '@styles/App.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ProjectContainer from './project-container';
 
 const CarouselContainer: React.FC<CarouselContainerProps> = ({
 	project,
@@ -11,33 +14,19 @@ const CarouselContainer: React.FC<CarouselContainerProps> = ({
 	const githubLink = `${project.links?.github ?? ""}`
 
 	return (
-		<article className={slideClassName}>
+		<article className={slideClassName} key={index}>
 			<div className='slide'>
+
+				{/* Header */}
 				<h3>{project.name}</h3>
-				<div className='project-icon-container'>
-					{project.icons.map((icon, index) => {
-						return icon ? (
-							<img
-								key={index}
-								className='project-icon'
-								src={icon}
-							/>
-						) : null;
-					})}
-				</div>
-				<div className='project-description'>
-					<p>{project.description}</p>
-					<ul className='project-list'>
-						{project.technologies.map((tech, index) => (
-							<li key={index}>
-								<strong>{tech}</strong>
-							</li>
-						))}
-					</ul>
+				
+				{/* Content Container*/}
+				<div className='project-container'>
+					<ProjectContainer project={project}/>
 				</div>
 
+				{/* Github link wrapper */}
 				<div className='carousel-links-wrapper'>
-					<Link to={`/projects/${project.id}`} className='website-link'>More details</Link>
 					{project.links?.github ?? "" ? (
 						<a
 							href={githubLink}

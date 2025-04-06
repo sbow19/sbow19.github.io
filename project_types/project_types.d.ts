@@ -5,22 +5,27 @@ declare global {
         }
     }
 
+    type SlideContent = {
+        title: string
+        text: string | JSX.Element
+
+        /**
+         * URL for image or video
+         */
+        content: string
+        contentSrc: string
+        contentTag: string
+
+    }
+
     type ProjectDetails = {
         name: string
-        description: string
         technologies: Array<string>
+        slides: Array<SlideContent>
         links: {
             github: string
             portfolio_page?: string
         }
-        icons: Array<string>
-        id: string
-        overview: string
-        features: Array<string>
-        full_technologies: Array<string>
-        challenges: Array<string>
-        future: Array<string>
-        code: string
     }
 
     //COMPONENT PROPS TYPES

@@ -1,3 +1,9 @@
+/**
+ * Container for all content held in the slide show. Has nav buttons
+ * to cycle between projects. Each project has a number of slides 
+* which can be cycled per project.
+ */
+
 import '@styles/index.css';
 import '@styles/App.css';
 import React, {useEffect} from 'react';

@@ -13,43 +13,35 @@ const Skills: React.FC = () => {
 					<li className='skill-container'>
 						<h3>Programming languages: </h3>
 						<p>
-							Proficient in <strong>JavaScript</strong> and{' '}
-							<strong>TypeScript</strong>, and
-							in <strong>Python</strong>. Currently learning <strong>Go</strong>.
+							<strong>JavaScript / </strong> {' '}
+							<strong>TypeScript, </strong>
+							<strong>Python. </strong>
+							Currently learning <strong>Go</strong>.
 						</p>
 					</li>
 					<li className='skill-container'>
 						<h3>Web technologies:</h3>
 						<p>
-							Skilled in creating responsive and accessible web pages using{' '}
-							<strong>HTML5</strong> and <strong>CSS3</strong>.
+							<strong>HTML5, </strong>
+							<strong>CSS and Sass, </strong>
 						</p>
 					</li>
 					<li className='skill-container'>
 						<h3>Frameworks:</h3>
 						<p>
-							Experience in building developing a dynamic mobile application
-							using <strong>React Native</strong>.{' '}
+							<strong>React, NextJS, React Native, ExpressJS, Jest, </strong>
+							<strong>Flask</strong>
 						</p>
 					</li>
 					<li className='skill-container'>
 						<h3>Other technologies:</h3>
 						<p>
-							{' '}
-							Knowledgeable in version control with <strong>Git</strong>,
-							managing databases with <strong>SQLite</strong> and{' '}
-							<strong>MySQL</strong>, designing <strong>RESTful APIs</strong>,
-							and backend development with <strong>Node.js</strong>. Proficient
-							in using <strong>VSCode</strong> as a development environment.
-						</p>
-					</li>
-					<li className='skill-container'>
-						<h3>Soft skills:</h3>
-						<p>
-							Proven ability in <strong>project management</strong>, keen{' '}
-							<strong>attention to detail</strong>, strong{' '}
-							<strong>team-player</strong> qualities, and a{' '}
-							<strong>creative thinker</strong> capable of innovative solutions.
+							<strong>Bash scripting, </strong>
+							<strong>Git / Github, </strong>
+							<strong>SQLite, MySQL, </strong>
+							<strong>RESTful API design and consumption, OpenAPI, </strong>
+							<strong>Node.js, </strong>
+							<strong>VSCode, </strong> currently learning <strong>Vim</strong>.
 						</p>
 					</li>
 				</ul>
