@@ -202,10 +202,10 @@ build on my game development skills using low-level APIs,
 such as OpenGL and WebGL.
 <br/>
 <br/>
-I am focusing on developing a physics engine, which I can use for other small games.
+I am focusing on developing a physics engine, which I can use  other small games.
 `,contentTag:"Play: click the window and use the arrow keys to move and WASD keys to move the camera.",content:`<div class="iframe-wrapper">
   <iframe
-    src="src/assets/project-media/WEBGL-bounce/dist/index.html"
+    src="src/assets/project-media/WEBGL-bounce/dist/game.html"
     title="Canvas Game"
     width="100%"
     height="100%"
