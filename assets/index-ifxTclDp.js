@@ -203,15 +203,16 @@ such as OpenGL and WebGL.
 <br/>
 <br/>
 I am focusing on developing a physics engine, which I can use  other small games.
-`,contentTag:"Play: click the window and use the arrow keys to move and WASD keys to move the camera.",content:`<div class="iframe-wrapper">
-  <iframe
-    src="src/assets/project-media/WEBGL-bounce/dist/game.html"
-    title="Canvas Game"
-    width="100%"
-    height="100%"
-    style={{ border: 'none' }}
-  />
-</div >
+`,contentTag:"Play: click the window and use the arrow keys to move and WASD keys to move the camera.",content:`<div
+    class="canvas-container"
+>
+    <canvas id="my_canvas"></canvas>
+</div>
+
+<div
+    id="debug-container"
+>
+</div>
 `,contentSrc:"src/assets/project-media/vocab-tracker/add_project.mp4"}]},{name:"Practice CLI",technologies:["TypeScript"],links:{github:"https://www.github.com/sbow19/practice-cli"},slides:[{title:"Introduction",text:`A simple CLI application to demonstrate my skills with JavaScript and TypeScript. This tool offers various interactive features to showcase my work with APIs and basic logic.
 <br/>
 <br/>
