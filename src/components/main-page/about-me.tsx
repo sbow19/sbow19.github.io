@@ -17,15 +17,16 @@ const AboutMe: React.FC = () => {
           <h2>About me</h2>
         </div>
         <div className="about-me-text">
-          I am a software developer developer with a passion for building
+          I am a software developer with a passion for building
           fullstack productivity applications for mobile and the browser. I have
           a strong understanding of JavaScript and Python, which have formed the
           cornerstone of my projects. I am also learning Go.
           <br />
           <br />
-          Most recently, I built a web-scraper Chrome Extension, which speeds up
-          the process of collecting data from frequently visited websites. My
-          current projects include a CLI-messaging app (Go), a Mobile language
+          Most recently, I built two web-scraper Chrome Extension, one speeds up
+          the process of collecting data from frequently visited websites, and the other
+          lets you highlight, translate, and save text on the browser. I am
+          working on a CLI-messaging app (Go), a language
           learning app (React Native), and a 3D browser-game (WebGL,
           TypeScript).
           <br />

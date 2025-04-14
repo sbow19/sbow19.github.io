@@ -19,14 +19,14 @@ export const SlidePage: React.FC<{
         {/* Text container title */}
         <h3>{slide.title}</h3>
 
-        <div dangerouslySetInnerHTML={{ __html: slide.text }} />
+        <div className='text-container-inner'dangerouslySetInnerHTML={{ __html: slide.text }} />
       </div>
 
       {/**
        * Video or screenshot embedded
        */}
 
-       <h4>{slide.contentTag}</h4>
+       <h4 className='content-title'>{slide.contentTag}</h4>
 
       <div
         onClick={() => {

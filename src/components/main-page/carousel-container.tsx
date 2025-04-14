@@ -9,6 +9,8 @@ import ProjectContainer from './project-container';
 const CarouselContainer: React.FC<CarouselContainerProps> = ({
 	project,
 	index,
+	projectIndex
+	
 }) => {
 	const slideClassName = `slide-container slide-${index}`;
 	const githubLink = `${project.links?.github ?? ""}`
@@ -18,11 +20,11 @@ const CarouselContainer: React.FC<CarouselContainerProps> = ({
 			<div className='slide'>
 
 				{/* Header */}
-				<h3>{project.name}</h3>
+				<h3 className='project-name'>{project.name}</h3>
 				
 				{/* Content Container*/}
 				<div className='project-container'>
-					<ProjectContainer project={project}/>
+					<ProjectContainer project={project} index={index} projectIndex={projectIndex}/>
 				</div>
 
 				{/* Github link wrapper */}

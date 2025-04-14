@@ -6,7 +6,7 @@
 
 import '@styles/index.css';
 import '@styles/App.css';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import CarouselContainer from './carousel-container';
 import { operateCarousel } from '@/src/utils/carousel';
 import { Link } from 'react-router-dom';
@@ -14,9 +14,11 @@ import { Link } from 'react-router-dom';
 // Carousel Component - displays carousel containers
 const ProjectSlide: React.FC<ProjectSlideProps> = ({ projects }) => {
 
+	// Current Project index
+	const [currentProjectIndex, setCurrentProjectIndex] = useState(0)
     useEffect(()=>{
 
-		operateCarousel(projects.length, 'left-arrow', 'right-arrow')
+		operateCarousel(projects.length, 'left-arrow', 'right-arrow', setCurrentProjectIndex)
 
 	}, [])
 	return (
@@ -47,9 +49,10 @@ const ProjectSlide: React.FC<ProjectSlideProps> = ({ projects }) => {
 				{projects.map((project, index) => {
 					return (
 						<CarouselContainer
-                            key={index}
+                            key={`${project.name}`}
 							index={index}
 							project={project}
+							projectIndex={currentProjectIndex}
 						/>
 					);
 				})}

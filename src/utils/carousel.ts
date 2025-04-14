@@ -5,6 +5,7 @@ function operateCarousel(
 	noOfSlides: number,
 	leftArrow: string,
 	rightArrow: string,
+	setCurrentProjectIndex
 ) {
 	function visibleButtonState(displacementValue) {
 		//Check if window is laptop screen size
@@ -67,6 +68,8 @@ function operateCarousel(
 			slideContainers.forEach((container) => {
 				container.style.transform = `translateX(${-displaceAmount}%)`;
 			});
+
+			setCurrentProjectIndex(displaceValue)
 		}
 
 		//Check button state
@@ -84,6 +87,9 @@ function operateCarousel(
 			slideContainers.forEach((container) => {
 				container.style.transform = `translateX(${-displaceAmount}%)`;
 			});
+
+			setCurrentProjectIndex(displaceValue)
+
 		}
 
 		//Check button state
